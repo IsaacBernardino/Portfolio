@@ -219,7 +219,7 @@ header {
 
 .visualizador-projetos {
   position: relative;
-  width: 100%;
+  max-width: 800px;
   z-index: 2;
 }
 
@@ -263,10 +263,11 @@ header {
 }
 
 .control-buttons {
+  z-index: 5;
   position: absolute;
   justify-content: space-between;
 
-  width: 100%;
+  width: 75%;
   height: 50px;
 } .control-buttons button {
   width: 40px;
