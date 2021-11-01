@@ -36,14 +36,15 @@ body {
 }
 
 footer {
-  width: 55%;
+  width: 75%;
   height: 40px;
 
   padding: 2px 10px;
-  margin: 0 5px 10px 0;
+  margin: 0 auto 10px auto;
 
   color: #000;
-  font-size: 8pt;
+  font-size: 9pt;
+  font-weight: 300;
 
   background-color: #fff;
 
@@ -193,7 +194,7 @@ header {
 
   padding: 5px 10px 30px 10px;
   margin: 10px 0;
-  width: 96%;
+  width: 86%;
   min-height: 400px;
 
   align-self: center;
@@ -221,6 +222,9 @@ header {
   position: relative;
   max-width: 800px;
   z-index: 2;
+
+  border-radius: 25px;
+  box-shadow: 0 0 50px 15px #ffffff55;
 }
 
 #counter {
@@ -231,13 +235,11 @@ header {
 
   border-radius: 75px;
   margin: 20px 0 0 0;
-}
-
-.visualizador-projetos::after {
+}.visualizador-projetos::after {
   content: '';
   position: absolute;
   left: 90px;
-  bottom: -5px;
+  bottom: 1px;
 
   width: 200px;
   height: 466px;
@@ -245,21 +247,19 @@ header {
 
   border-radius: 20px;
 
-  background-color: #ffffff55;
+  background-color: #ffff7555;
   z-index: -1;
-}
-
-.visualizador-projetos::before {
+}.visualizador-projetos::before {
   content: '';
   position: absolute;
   right: 90px;
-  bottom: -5px;
+  bottom: 1px;
 
   width: 200px;
   height: 466px;
   padding: 8px 12px;
   border-radius: 20px;
-  background-color: #ffffff55;
+  background-color: #ffff7560;
 }
 
 .control-buttons {
@@ -270,8 +270,8 @@ header {
   width: 75%;
   height: 50px;
 } .control-buttons button {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 
   background-color: #000;
 
@@ -282,7 +282,7 @@ header {
   border: 3px solid white;
   border-radius: 50%;
   cursor: pointer;
-  transition: 0.15s ease-in-out;
+  transition: 0.125s ease-in-out;
 
 }.social_button:hover{
   border: 3px solid white;

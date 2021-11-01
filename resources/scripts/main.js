@@ -32,7 +32,13 @@ function updateSlider (){
   requestAnimationFrame(updateSlider);
 
   projetoEl.src = imagens[imageIndex];
+
+  imageIndex <= 0 ? prevButtonEl.style.visibility = 'hidden' : prevButtonEl.style.visibility = 'visible';
+  imageIndex >= imagens.length - 1 ? nextButtonEl.style.visibility = 'hidden' : nextButtonEl.style.visibility = 'visible';
+
 }
+
+
 
 function nextImage (){
   if(imageIndex < imagens.length - 1){
