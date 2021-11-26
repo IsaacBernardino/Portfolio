@@ -3,6 +3,8 @@
 
 * {
   box-sizing: border-box;
+
+  image-rendering: optimizeSpeed;
 }
 
 body {
@@ -83,19 +85,6 @@ header {
 
   border-radius: 20px 115px 20px 115px;
 }
-header:after {
-  content:'';
-
-  width: 100vw;
-  height: 100vh;
-
-  z-index: -2;
-
-  background-image: url('../images/BinaryTex.png');
-  background-size: contain;
-  opacity: 0.25;
-  position: absolute;
-}
 
 .info {
   display: flex;
@@ -103,6 +92,8 @@ header:after {
 }
 
 .foto {
+  background: linear-gradient(#03284d, #5c83ab);
+
   position: absolute;
   right: -1px;
   top: -1px;
@@ -119,8 +110,8 @@ header:after {
   justify-content: center;
   align-items: center;
 } .foto img {
-  width: 99%;
-  height: 99%;
+  width: 100%;
+  aspect-ratio: 1;
   border-radius: 50%;
 
   transition: 0.15s all ease-in-out;

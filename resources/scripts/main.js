@@ -12,24 +12,20 @@ const prevButtonEl = document.querySelector('#prev');
 let imageIndex = 0;
 
 const imagens = [
-    'resources/images/screenshots/manager.jpg',
-    'resources/images/screenshots/manager2.jpg',
     'resources/images/screenshots/manager3.jpg',
 
-    'resources/images/screenshots/stopwatch.jpg',
-    'resources/images/screenshots/stopwatch1.jpg',
     'resources/images/screenshots/stopwatch2.jpg',
 
-    'resources/images/screenshots/todo.jpg',
-    'resources/images/screenshots/todo2.jpg',
     'resources/images/screenshots/todo3.jpg'
 ]
 
 nextButtonEl.addEventListener('click', nextImage);
 prevButtonEl.addEventListener('click', prevImage);
 
+setInterval(updateSlider, 1000/15);
+
 function updateSlider (){
-  requestAnimationFrame(updateSlider);
+  // requestAnimationFrame(updateSlider);
 
   projetoEl.src = imagens[imageIndex];
 
@@ -38,7 +34,7 @@ function updateSlider (){
 }
 
 window.addEventListener('load' , () => {
-    const imgEl = document.createElement('img');
+  const imgEl = document.createElement('img');
   const nextImage = "resources/images/icons/next.png";
   imgEl.src = nextImage;
 
