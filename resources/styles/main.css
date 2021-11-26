@@ -2,19 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-  padding: 0;
-  margin: 0;
-
   box-sizing: border-box;
 }
 
 body {
-  background-color: #123;
+  padding: 0;
+  margin: 0;
+
+  background-color: #012;
 
   background-size: 100%;
 
   font-family: Poppins, Arial, Helvetica, sans-serif;
-  color: #eee;
+  color: #fff;
 
   overflow-x: hidden;
 }
@@ -28,7 +28,7 @@ body {
 }
 
 #interface {
-  background: linear-gradient(#ff0000bb, #0015ffaa);
+  background: linear-gradient(#ff0000cd, #f2ff00aa);
   margin: 0 auto;
 
   display: flex;
@@ -36,8 +36,8 @@ body {
 }
 
 footer {
-  width: 75%;
-  height: 40px;
+  width: 98vw;
+  height: 25px;
 
   padding: 2px 10px;
   margin: 0 auto 10px auto;
@@ -53,31 +53,64 @@ footer {
 
 /* HEADER */
 header {
-  background-color: #000000aa;
-  min-height: 20vh;
+  position: relative;
+  border: 2px solid #ffffffaa;
+  border-radius: 10px 100px 10px 100px;
+
+  left: 50%;
+  transform: translateX(-50%);
+ 
+  height: 90vh;
+  width: 90vw;
+
+  margin-top: 30px;
+  margin-bottom: 55px;
+
+  padding: 10px;
   
   display: flex;
   align-items: center;
   justify-content: center;
+} header::before {
+  content: '';
+  position: absolute;
 
-  padding: 25px 5px 30px 5px;
+  width: 92vw;
+  height: 92vh;
+  z-index: -2;
+  
+  border: 2px solid #ffffff90;
 
-  border-radius: 0 0 120px 0;
+  border-radius: 20px 115px 20px 115px;
+}
+header:after {
+  content:'';
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: -2;
+
+  background-image: url('../images/BinaryTex.png');
+  background-size: contain;
+  opacity: 0.25;
+  position: absolute;
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .foto {
-  position: relative;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+
   border: 5px solid #fff;
 
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  aspect-ratio: 1;
   
   border-radius: 50%;
   z-index: 2;
@@ -86,89 +119,69 @@ header {
   justify-content: center;
   align-items: center;
 } .foto img {
-  width: 93%;
-  height: 93%;
+  width: 99%;
+  height: 99%;
   border-radius: 50%;
 
   transition: 0.15s all ease-in-out;
-}.foto:hover{
-  border: 10px solid white;
-}
-
-.foto::before {
-  content: 'BitOne';
-  position: absolute;
-  right: -40px;
-
-  background-color: black;
-
-  border: 6px solid #fff;
-  border-radius: 50%;
-
-  width: 64px;
-  height: 64px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .nomes {
-  margin: 0 0 0 12px;
+  padding: 0;
 }
 
 .nome {
-  font-size: 28pt;
+  font-size: 30pt;
+  font-weight: 800;
+  letter-spacing: 8px;
 }
 
 .empresa-ficticia {
   font-size: 18pt;
-  letter-spacing: 2px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  text-align: right;
 }
 .cargo {
-  font-size: 10pt;
+  font-size: 12pt;
+  font-weight: 200;
+  text-align: right;
 }
 
 /* Social buttons */
 
 .social {
   position: relative;
-  background-color: #00000090;
 
-  margin: 10px 0;
   padding: 10px 0;
 
-  width: 90%;
-
-  border-radius: 0 60px 60px 0;
+  width: 100%;
 
   justify-content: space-evenly;
 }
 
 .social h1 {
+  font-size: 20pt;
   font-weight: 600;
-  letter-spacing: 6px;
-  font-size: 18pt;
+  letter-spacing: 8px;
 }
 
 .social_button {
   width: 60px;
   height: 60px;
 
-  background-color: #000;
+  background-color: #00000000;
 
-  border: 5px solid white;
+  padding: 5px;
+
+  border: 0;
   border-radius: 50%;
   cursor: pointer;
-  transition: 0.15s ease-in-out;
-}.social_button:hover{
-  border: 3px solid white;
-  padding: 1px;
 }
 
 .social_button img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1;
   border-radius: 50%;
 }
 
@@ -176,10 +189,10 @@ header {
 
 .sobre {
   position: relative;
-  background-color: #00000090;
 
-  padding: 10px 5px;
-  width: 90%;
+  padding: 5px 25px;
+  margin-bottom: 25px;
+  width: 99%;
 
   border-radius: 10px 0 0 10px;
 
@@ -190,18 +203,15 @@ header {
 .projetos {
   flex-direction: column;
   position: relative;
-  background-color: #00000090;
 
   padding: 5px 10px 30px 10px;
   margin: 10px 0;
-  width: 86%;
+  width: 80%;
   min-height: 400px;
 
   align-self: center;
 
   border-radius: 30px 0 30px 0;
-  border-left: 8px solid white;
-  border-right: 8px solid white;
 } .projetos h1 {
   margin: 10px 0 25px 0;
 }
@@ -221,6 +231,7 @@ header {
 .visualizador-projetos {
   position: relative;
   max-width: 800px;
+  
   z-index: 2;
 
   border-radius: 25px;
@@ -228,63 +239,27 @@ header {
 }
 
 #counter {
-  background-color: #eee;
+  background-color: #fff;
   color: #000;
 
-  padding:0 10px;
+  padding: 5px 25px;
 
   border-radius: 75px;
   margin: 20px 0 0 0;
-}.visualizador-projetos::after {
-  content: '';
-  position: absolute;
-  left: 90px;
-  bottom: 1px;
-
-  width: 200px;
-  height: 466px;
-  padding: 8px 12px;
-
-  border-radius: 20px;
-
-  background-color: #ffff7555;
-  z-index: -1;
-}.visualizador-projetos::before {
-  content: '';
-  position: absolute;
-  right: 90px;
-  bottom: 1px;
-
-  width: 200px;
-  height: 466px;
-  padding: 8px 12px;
-  border-radius: 20px;
-  background-color: #ffff7560;
 }
 
 .control-buttons {
-  z-index: 5;
   position: absolute;
+  z-index: 5;
+
   justify-content: space-between;
 
-  width: 75%;
+  width: 140%;
+  height: 50%;
+} .control-buttons div {
+  width: 50px;
   height: 50px;
-} .control-buttons button {
-  width: 35px;
-  height: 35px;
 
-  background-color: #000;
-
-  color: #fff;
-  font-weight: 100;
-  font-size: 14pt;
-
-  border: 3px solid white;
   border-radius: 50%;
   cursor: pointer;
-  transition: 0.125s ease-in-out;
-
-}.social_button:hover{
-  border: 3px solid white;
-  padding: 1px;
 }

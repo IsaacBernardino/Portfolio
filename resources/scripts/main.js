@@ -35,12 +35,25 @@ function updateSlider (){
 
   imageIndex <= 0 ? prevButtonEl.style.visibility = 'hidden' : prevButtonEl.style.visibility = 'visible';
   imageIndex >= imagens.length - 1 ? nextButtonEl.style.visibility = 'hidden' : nextButtonEl.style.visibility = 'visible';
-
 }
 
+window.addEventListener('load' , () => {
+    const imgEl = document.createElement('img');
+  const nextImage = "resources/images/icons/next.png";
+  imgEl.src = nextImage;
 
+  nextButtonEl.appendChild(imgEl);
+
+  const imgElPrev = document.createElement('img');
+  const prevImage = "resources/images/icons/prev.png";
+  imgElPrev.src = prevImage;
+
+  prevButtonEl.appendChild(imgElPrev);
+});
 
 function nextImage (){
+
+
   if(imageIndex < imagens.length - 1){
     imageIndex++;
   }
