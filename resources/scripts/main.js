@@ -12,20 +12,18 @@ const prevButtonEl = document.querySelector('#prev');
 let imageIndex = 0;
 
 const imagens = [
-    'resources/images/screenshots/manager3.jpg',
-
-    'resources/images/screenshots/stopwatch2.jpg',
-
-    'resources/images/screenshots/todo3.jpg'
+  'resources/images/screenshots/manager1.png',
+  'resources/images/screenshots/todo.png',
+  'resources/images/screenshots/Stopwatch.png',
+  'resources/images/screenshots/nexttep1.png',
+  'resources/images/screenshots/nexttep2.png'
 ]
 
 nextButtonEl.addEventListener('click', nextImage);
 prevButtonEl.addEventListener('click', prevImage);
 
-setInterval(updateSlider, 1000/15);
-
 function updateSlider (){
-  // requestAnimationFrame(updateSlider);
+  requestAnimationFrame(updateSlider);
 
   projetoEl.src = imagens[imageIndex];
 
@@ -33,23 +31,7 @@ function updateSlider (){
   imageIndex >= imagens.length - 1 ? nextButtonEl.style.visibility = 'hidden' : nextButtonEl.style.visibility = 'visible';
 }
 
-window.addEventListener('load' , () => {
-  const imgEl = document.createElement('img');
-  const nextImage = "resources/images/icons/next.png";
-  imgEl.src = nextImage;
-
-  nextButtonEl.appendChild(imgEl);
-
-  const imgElPrev = document.createElement('img');
-  const prevImage = "resources/images/icons/prev.png";
-  imgElPrev.src = prevImage;
-
-  prevButtonEl.appendChild(imgElPrev);
-});
-
 function nextImage (){
-
-
   if(imageIndex < imagens.length - 1){
     imageIndex++;
   }

@@ -1,64 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Isaac Bernardino </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isaac Bernardino</title>
 
-  <link rel="stylesheet" href="./resources/styles/main.css">
-</head>
-<body>
-  
-  <div id="interface">
-    
-    <header>
-      <div class="info">
-        <div class="foto">
-          <img src="./resources/images/avatar-removebg.png" alt=""></div>
-        <div class="nomes">
-          <div class="nome">Isaac Bernardino</div>
-          <div class="empresa-ficticia">Middle_Bit Dev</div>
-          <div class="cargo">Desenvolvedor Front-End</div>
+    <link rel="stylesheet" href="./resources/styles/main.css" />
+  </head>
+  <body>
+    <div id="interface">
+      <header>
+        <div class="info">
+          <div class="foto">
+            <img src="./resources/images/hiBitLogo.png" alt="" />
+          </div>
+          <div class="nomes">
+            <div class="nome">Isaac Bernardino</div>
+            <div class="empresa-ficticia">HiBit Dev</div>
+            <div class="cargo">Game Designer & Front-End DEV</div>
+          </div>
         </div>
+      </header>
+
+      <div class="social flex-center">
+        <h1>Social</h1>
+        <button class="social_button" id="goto-git">
+          <ion-icon name="logo-github"></ion-icon>
+        </button>
+        <button class="social_button" id="goto-linke">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </button>
+        <button class="social_button" id="goto-fb">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </button>
       </div>
-    </header>
 
-    <div class="social flex-center">
-      <h1>Social</h1>
-      <button class="social_button" id="goto-git"><img src="./resources/images/icons/github-64.png" alt=""></button>
-      <button class="social_button" id="goto-linke"><img src="./resources/images/icons/linkedin-64.png" alt=""></button>
-      <button class="social_button" id="goto-fb"><img src="./resources/images/icons/facebook-64.png" alt=""></button>
-    </div>
+      <div class="sobre">
+        <h1>Sobre mim</h1>
+        <p>
+          Estudante no desenvolvimento WEB Front-End, utilizo o melhor do mundo
+          WEB para construir seu site com elegância e muita tecnologia:
+        </p>
+        <code class="flex-center"> HTML5 CSS3 JavaScript </code>
+      </div>
 
-    <div class="sobre">
-      <h1>Sobre mim</h1>
-      <p>Estudante no desenvolvimento WEB Front-End, utilizo o melhor do mundo WEB para construir seu site com elegância e muita tecnologia: </p>
-      <code class="flex-center">  HTML5 CSS3 JavaScript </code>
+      <div class="projetos flex-center">
+        <h1>Projetos</h1>
+        <p>Para mais detalhes acesse meu Github</p>
 
-    </div>
+        <div class="visualizador-projetos flex-center">
+          <div class="phone-frame">
+            <img class="projeto" />
+          </div>
 
-    <div class="projetos flex-center">
-      <h1>Projetos</h1>
-      <p>Para mais detalhes acesse meu Github</p>
-      <div class="visualizador-projetos flex-center">
-        <img class="projeto" />
-        <div class="control-buttons flex-center">
-          <div class="flex-center" id="prev"></div>
-          <div class="flex-center" id="next"></div>
+          <div class="control-buttons flex-center">
+            <div class="flex-center" id="prev">
+              <ion-icon name="chevron-back-outline"></ion-icon>
+            </div>
+            <div class="flex-center" id="next">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </div>
+          </div>
         </div>
+
+        <div id="counter"></div>
       </div>
-      
-      <div id="counter"></div>
+
+      <footer class="flex-center">Isaac Bernardino | Middle_Bit - 2021</footer>
     </div>
 
-    <footer class="flex-center">
-      Isaac Bernardino | Middle_Bit - 2021
-    </footer>
+    <script src="./resources/scripts/main.js"></script>
 
-  </div>
-
-  <script src="./resources/scripts/main.js"></script>
-
-</body>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
