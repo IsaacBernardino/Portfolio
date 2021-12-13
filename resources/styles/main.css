@@ -28,7 +28,7 @@ body {
 }
 
 #interface {
-  background: linear-gradient(#ff0000cd, #f2ff00aa);
+  background: linear-gradient(#89a, #234);
   margin: 0 auto;
 
   display: flex;
@@ -54,7 +54,7 @@ footer {
 /* HEADER */
 header {
   position: relative;
-  border: 3px solid #000;
+  border: 5px solid #00000099;
   border-radius: 10px 100px 10px 100px;
 
   left: 50%;
@@ -78,7 +78,7 @@ header::before {
   height: 46vh;
   z-index: -2;
 
-  border: 3px solid #000;
+  border: 5px solid #00000099;
 
   border-radius: 20px 115px 20px 115px;
 }
@@ -90,8 +90,8 @@ header::before {
 
 .foto {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -5px;
+  top: -12px;
 
   width: 150px;
   aspect-ratio: 1;
@@ -103,7 +103,7 @@ header::before {
   align-items: center;
 }
 .foto img {
-  width: 100%;
+  width: 90%;
   aspect-ratio: 1;
 }
 
@@ -112,8 +112,8 @@ header::before {
 }
 
 .nome {
-  font-size: 30pt;
-  font-weight: 800;
+  font-size: 32pt;
+  font-weight: 600;
   letter-spacing: 5px;
 }
 
@@ -137,7 +137,7 @@ header::before {
 
   padding: 10px 0;
 
-  width: 100%;
+  width: 90%;
 
   justify-content: space-evenly;
 }
