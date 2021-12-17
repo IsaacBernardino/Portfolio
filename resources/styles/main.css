@@ -3,18 +3,23 @@
 
 * {
   box-sizing: border-box;
+
+  user-select: none;
 }
 
 body {
   padding: 0;
   margin: 0;
 
-  background-color: #012;
+  background-image: url('../images/wallpaper.jpg');
 
   background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   font-family: Poppins, Helvetica, Arial, sans-serif;
-  color: #fff;
+  color: #eee;
 
   overflow-x: hidden;
 }
@@ -28,22 +33,21 @@ body {
 }
 
 #interface {
-  background: linear-gradient(#89a, #234);
-  margin: 0 auto;
-
+  background-color: #113355cc;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+
+  justify-content: space-evenly;
 }
 
 footer {
   width: 98vw;
-  height: 25px;
+  height: 50px;
 
-  padding: 15px 10px;
-  margin: 0 auto 10px auto;
+  margin: 20px auto 20px auto;
 
   color: #000;
-  font-size: 9pt;
+  font-size: 11pt;
   font-weight: 300;
 
   background-color: #fff;
@@ -51,100 +55,64 @@ footer {
   border-radius: 40px;
 }
 
-/* HEADER */
-header {
-  position: relative;
-  border: 5px solid #00000099;
-  border-radius: 10px 100px 10px 100px;
-
-  left: 50%;
-  transform: translateX(-50%);
-
-  height: 50vh;
-  width: 90vw;
-  margin-top: 50px;
-
-  padding: 15px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-header::before {
-  content: "";
-  position: absolute;
-
-  width: 92vw;
-  height: 46vh;
-  z-index: -2;
-
-  border: 5px solid #00000099;
-
-  border-radius: 20px 115px 20px 115px;
-}
+/* Informações */
 
 .info {
+  
   display: flex;
   flex-direction: column;
+
+  width: 100%;
+  padding: 0 10px;
+
+  border-radius: 25px 100px 25px 100px;
 }
 
-.foto {
-  position: absolute;
-  right: -5px;
-  top: -12px;
-
-  width: 150px;
-  aspect-ratio: 1;
-
-  border-radius: 50%;
+.logo {
+  position: relative;
+  width: 100%;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
-.foto img {
-  width: 90%;
+.logo img {
+  position: relative;
+  width: 100px;
   aspect-ratio: 1;
 }
-
-.nomes {
-  padding: 0;
+.empresa-ficticia {
+  font-size: 25pt;
+  font-weight: 100;
 }
 
 .nome {
-  font-size: 32pt;
-  font-weight: 600;
-  letter-spacing: 5px;
+  font-size: 40pt;
+  font-weight: 400;
+  letter-spacing: -1px;
 }
 
-.empresa-ficticia {
-  font-size: 25pt;
-  font-weight: 300;
-  text-align: right;
-}
+
 .cargo {
-  padding-left: 55%;
-  font-size: 14pt;
+  font-size: 15pt;
   font-weight: 200;
   letter-spacing: -1px;
-  text-align: right;
 }
 
 /* Social buttons */
 
 .social {
-  position: relative;
+  background-color: #aaaaaa45;
+  padding-left: 10px;
+  border-radius: 10px;
+  display: flex;
 
-  padding: 10px 0;
-
-  width: 90%;
-
-  justify-content: space-evenly;
+  margin: 25px 0;
 }
 
 .social h1 {
-  font-size: 20pt;
-  font-weight: 600;
+  font-size: 24pt;
+  font-weight: 500;
   letter-spacing: 6px;
 }
 
@@ -163,23 +131,16 @@ header::before {
 }
 
 /* Sobre */
-
 .sobre {
-  position: relative;
-
-  padding: 0 25px;
-  width: 100%;
+  width: 600px;
+  padding: 0 10px;
+  align-self: center;
 }
 
 .projetos {
-  align-self: center;
   flex-direction: column;
-
-  position: relative;
-  min-height: 400px;
-
-  padding: 18px;
-  margin: 15px 0;
+  
+  padding-bottom: 10px;
 }
 
 /* Slider */
@@ -202,7 +163,7 @@ header::before {
   border-radius: 20px;
   background-color: #000;
 
-  box-shadow: 0 0 50px 15px #ffffff80;
+  box-shadow: 0 0 50px 15px #aaaaaa65;
 }
 .phone-frame::before {
   content: "";
@@ -239,13 +200,13 @@ ion-icon {
 }
 
 #counter {
-  background-color: #fff;
-  color: #000;
+  background-color: #dededeaa;
+  color: #fff;
 
-  padding: 5px 25px;
+  padding: 8px 36px;
 
-  border-radius: 75px;
-  margin: 20px 0 0 0;
+  border-radius: 25px;
+  margin-top: 25px;
 }
 
 .control-buttons {
@@ -254,8 +215,8 @@ ion-icon {
 
   justify-content: space-between;
 
-  width: 140%;
-  height: 50%;
+  width: 145%;
+  height: 55%;
 }
 .control-buttons div {
   width: 50px;
